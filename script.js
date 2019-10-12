@@ -62,5 +62,5 @@ function addSongtoList() {
 function clearForm() {
   songInput.value = '';
   artistInput.value = '';
-  setListNum.value = 1;
+  setListNum.value = '1';
 };
