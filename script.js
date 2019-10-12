@@ -4,7 +4,7 @@ var artistInput = document.getElementById("songArtist");
 var setListNum = document.getElementById("setListNum");
 var button = document.querySelector(".btn");
 
-// Table Set List Targets
+// Table Set List Target Variables
 var setListOne = document.getElementById("targetListOne");
 var setListTwo = document.getElementById("targetListTwo");
 var setListThree = document.getElementById("targetListThree");
@@ -24,7 +24,6 @@ function addSong(e) {
   }
   e.preventDefault();
 };
-;
 
 // Clear Input Fields
 function clearForm() {
