@@ -15,36 +15,60 @@ button.addEventListener('click', addSong, true);
 // Add Song Function
 function addSong(e) {
   if (songInput.value === '' || artistInput.value === '') {
-    // Error Message if input field is empty
-    var errorMsg = document.getElementById("errorMsg");
-    errorMsg.innerHTML = "Please Add Song and Artist";
-    setTimeout(function () { errorMsg.innerHTML = ""; }, 3000);
+    errMessage();
+    clearForm();
   }
   else {
-    var list = setListNum.value;
-    switch (list) {
-      case "1":
-        console.log(songInput.value + "111");
-        console.log(artistInput.value + "111");
-
-        break;
-      case "2":
-        console.log(songInput.value + "222");
-        console.log(artistInput.value + "222");
-        break;
-      case "3":
-        console.log(songInput.value + "333");
-        console.log(artistInput.value + "333");
-        break;
-    }
+    addSongtoList();
+    clearForm();
   }
-  clearForm();
   e.preventDefault();
 };
+;
 
 // Clear Input Fields
 function clearForm() {
-  songInput.value = ' ';
-  artistInput.value = ' ';
+  songInput.value = '';
+  artistInput.value = '';
   setListNum.value = 1;
 }
+
+// Error Message if input field is empty
+function errMessage() {
+  var errorMsg = document.getElementById("errorMsg");
+  errorMsg.innerHTML = "Please Add Song and Artist";
+  setTimeout(function () { errorMsg.innerHTML = ""; }, 3000);
+}
+
+// Create Table Row & Data
+function addSongtoList() {
+  var row = document.createElement('tr');
+  var col1 = document.createElement('td');
+  var col2 = document.createElement('td');
+  var song = document.createTextNode(songInput.value);
+  var artist = document.createTextNode(artistInput.value);
+  col1.appendChild(song);
+  col2.appendChild(artist);
+  row.appendChild(col1);
+  row.appendChild(col2);
+
+  var list = setListNum.value;
+  switch (list) {
+    case "1":
+      console.log(songInput.value + "111");
+      console.log(artistInput.value + "111");
+      setListOne.appendChild(row);
+
+      break;
+    case "2":
+      console.log(songInput.value + "222");
+      console.log(artistInput.value + "222");
+      setListTwo.appendChild(row);
+      break;
+    case "3":
+      console.log(songInput.value + "333");
+      console.log(artistInput.value + "333");
+      setListThree.appendChild(row);
+      break;
+  }
+};
