@@ -14,14 +14,29 @@ button.addEventListener('click', addSong, true);
 
 // Add Song Function
 function addSong(e) {
-  console.log(songInput.value);
-  console.log(artistInput.value);
-  console.log(setListNum.value);
   if (songInput.value === '' || artistInput.value === '') {
     // Error Message if input field is empty
     var errorMsg = document.getElementById("errorMsg");
     errorMsg.innerHTML = "Please Add Song and Artist";
     setTimeout(function () { errorMsg.innerHTML = ""; }, 3000);
+  }
+  else {
+    var list = setListNum.value;
+    switch (list) {
+      case "1":
+        console.log(songInput.value + "111");
+        console.log(artistInput.value + "111");
+
+        break;
+      case "2":
+        console.log(songInput.value + "222");
+        console.log(artistInput.value + "222");
+        break;
+      case "3":
+        console.log(songInput.value + "333");
+        console.log(artistInput.value + "333");
+        break;
+    }
   }
   clearForm();
   e.preventDefault();
