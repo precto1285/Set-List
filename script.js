@@ -36,7 +36,7 @@ function clearForm() {
 function errMessage() {
   var errorMsg = document.getElementById("errorMsg");
   errorMsg.innerHTML = "Please Add Song and Artist";
-  setTimeout(function () { errorMsg.innerHTML = ""; }, 3000);
+  setTimeout(function () { errorMsg.innerHTML = ""; }, 2000);
 }
 
 // Create Table Row & Data
