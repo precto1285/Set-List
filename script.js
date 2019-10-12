@@ -55,19 +55,12 @@ function addSongtoList() {
   var list = setListNum.value;
   switch (list) {
     case "1":
-      console.log(songInput.value + "111");
-      console.log(artistInput.value + "111");
       setListOne.appendChild(row);
-
       break;
     case "2":
-      console.log(songInput.value + "222");
-      console.log(artistInput.value + "222");
       setListTwo.appendChild(row);
       break;
     case "3":
-      console.log(songInput.value + "333");
-      console.log(artistInput.value + "333");
       setListThree.appendChild(row);
       break;
   }
