@@ -9,35 +9,27 @@ var setListOne = document.getElementById("targetListOne");
 var setListTwo = document.getElementById("targetListTwo");
 var setListThree = document.getElementById("targetListThree");
 
-// Event Listener to add Songs to Set List/s
+// Event Listener to add Songs to Set Lists
 button.addEventListener('click', addSong, true);
 
 // Add Song Function
 function addSong(e) {
   if (songInput.value === '' || artistInput.value === '') {
     errMessage();
-    clearForm();
   }
   else {
     addSongtoList();
-    clearForm();
   }
+  clearForm();
   e.preventDefault();
 };
-
-// Clear Input Fields
-function clearForm() {
-  songInput.value = '';
-  artistInput.value = '';
-  setListNum.value = 1;
-}
 
 // Error Message if input field is empty
 function errMessage() {
   var errorMsg = document.getElementById("errorMsg");
   errorMsg.innerHTML = "Please Add Song and Artist";
   setTimeout(function () { errorMsg.innerHTML = ""; }, 2000);
-}
+};
 
 // Create Table Row & Data
 function addSongtoList() {
@@ -51,6 +43,7 @@ function addSongtoList() {
   row.appendChild(col1);
   row.appendChild(col2);
 
+  // Choose Table to Add Data
   var list = setListNum.value;
   switch (list) {
     case "1":
@@ -62,5 +55,12 @@ function addSongtoList() {
     case "3":
       setListThree.appendChild(row);
       break;
-  }
+  };
+};
+
+// Clear Input Fields
+function clearForm() {
+  songInput.value = '';
+  artistInput.value = '';
+  setListNum.value = 1;
 };
