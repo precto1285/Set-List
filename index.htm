@@ -13,17 +13,22 @@
 </head>
 
 <body>
+  <!-- UI Header -->
   <div class="container">
     <div class="jumbotron bg-dark text-white text-center py-5 mt-3 mb-5">
       <h1>Set List Creator</h1>
     </div>
+    <!-- Form Card -->
     <div class="card form-group">
       <div class="card-header text-center bg-info text-light">
         <h2 class="my-3">Enter Song:</h2>
       </div>
       <div class="card-body bg-dark">
+        <!-- Song Input -->
         <input type="text" id="songName" class="form-control" placeholder="Song">
+        <!-- Artist Input -->
         <input type="text" id="songArtist" class="form-control" placeholder="Artist">
+        <!-- Set List# Input -->
         <select id="setListNum" class="form-control form-control-md">
           <option value="1">Set List 1</option>
           <option value="2">Set List 2</option>
@@ -31,11 +36,13 @@
         </select>
       </div>
       <div class="card-footer">
+        <!-- Submit Button -->
         <button class="form-control btn btn-block btn-danger">Submit</button>
       </div>
     </div>
   </div>
   <div class="row mt-4 mx-3">
+    <!-- Set List 1 Table Target -->
     <div class="col-md-4 border">
       <h5 class="text-center">Set List:1</h5>
       <table class="table">
@@ -45,11 +52,13 @@
             <th scope="col">Artist</th>
           </tr>
         <tbody>
+          <!-- Table1 Data Target -->
           <span id="targetListOne"></span>
         </tbody>
         </thead>
       </table>
     </div>
+    <!-- Set List 2 Table Target -->
     <div class="col-md-4 border">
       <h5 class="text-center">Set List:2</h5>
       <table class="table">
@@ -59,11 +68,13 @@
             <th scope="col">Artist</th>
           </tr>
         <tbody>
+          <!-- Table2 Data Target -->
           <span id="targetListTwo"></span>
         </tbody>
         </thead>
       </table>
     </div>
+    <!-- Set List 3 Table Target -->
     <div class="col-md-4 border">
       <h5 class="text-center">Set List:3</h5>
       <table class="table">
@@ -73,6 +84,7 @@
             <th scope="col">Artist</th>
           </tr>
         <tbody>
+          <!-- Table3 Data Target -->
           <span id="targetListThree"></span>
         </tbody>
         </thead>
@@ -90,6 +102,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
