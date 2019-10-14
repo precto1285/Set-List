@@ -38,7 +38,6 @@ function addSongtoList() {
   var col1 = document.createElement('td');
   var col2 = document.createElement('td');
   var col3 = document.createElement('td');
-  var col4 = document.createElement('td');
   // Create Remove Button
   var btnRemove = document.createElement('button');
   btnRemove.classList.add('btn');
