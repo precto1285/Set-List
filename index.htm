@@ -29,31 +29,33 @@
       </div>
       <div class="card-body bg-dark">
         <!-- Song Input -->
-        <input type="text" id="songName" class="form-control" placeholder="Song">
+        <input type="text" id="songName" class="form-control mb-1" placeholder="Song">
         <!-- Artist Input -->
-        <input type="text" id="songArtist" class="form-control" placeholder="Artist">
+        <input type="text" id="songArtist" class="form-control mb-1" placeholder="Artist">
         <!-- Set List# Input -->
         <select id="setListNum" class="form-control form-control-md">
           <option value="1">Set List 1</option>
           <option value="2">Set List 2</option>
           <option value="3">Set List 3</option>
+          <option value="4">Set List 4</option>
         </select>
       </div>
       <div class="card-footer">
         <!-- Submit Button -->
-        <button class="form-control btn btn-block btn-danger">Submit</button>
+        <button class="form-control btn btn-block btn-success">Submit</button>
       </div>
     </div>
   </div>
-  <div class="row mt-4 mx-3">
+  <div class="row mt-4 mx-3 text-center">
     <!-- Set List 1 Table Target -->
-    <div class="col-md-4 border">
-      <h5 class="text-center">Set List: 1</h5>
-      <table class="table">
+    <div class="col-md-3 border">
+      <h5>Set List: 1</h5>
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Song</th>
             <th scope="col">Artist</th>
+            <th scope="col">Remove</th>
           </tr>
         <tbody id="targetListOne">
           <!-- Table1 Data Target -->
@@ -62,13 +64,14 @@
       </table>
     </div>
     <!-- Set List 2 Table Target -->
-    <div class="col-md-4 border">
-      <h5 class="text-center">Set List: 2</h5>
-      <table class="table">
+    <div class="col-md-3 border">
+      <h5>Set List: 2</h5>
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Song</th>
             <th scope="col">Artist</th>
+            <th scope="col">Remove</th>
           </tr>
         <tbody id="targetListTwo">
           <!-- Table2 Data Target -->
@@ -77,16 +80,33 @@
       </table>
     </div>
     <!-- Set List 3 Table Target -->
-    <div class="col-md-4 border">
-      <h5 class="text-center">Set List: 3</h5>
-      <table class="table">
+    <div class="col-md-3 border">
+      <h5>Set List: 3</h5>
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Song</th>
             <th scope="col">Artist</th>
+            <th scope="col">Remove</th>
           </tr>
         <tbody id="targetListThree">
           <!-- Table3 Data Target -->
+        </tbody>
+        </thead>
+      </table>
+    </div>
+    <!-- Set List 4 Table Target -->
+    <div class="col-md-3 border">
+      <h5>Set List: 4</h5>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Song</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Remove</th>
+          </tr>
+        <tbody id="targetListFour">
+          <!-- Table4 Data Target -->
         </tbody>
         </thead>
       </table>
